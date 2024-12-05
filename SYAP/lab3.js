@@ -8,7 +8,7 @@ function flattenArray(arr) {
 };
 
 
-console.log(flattenArray([1, [1, 2, [3, 4]], [2, 4]]))
+console.log(flattenArray([1, [1, 2, [3, 4, [5, 6]]], [2, 4], [[7, 8], 9]]))
 
 //ЗАДАНИЕ 2. Найдите сумму элементов массива, если вложенность массива неизвестна. 
 
@@ -52,7 +52,6 @@ function groupStudentsByAge(students) {
 
     return result;
 }
-
 let groupedStudents = groupStudentsByAge(students);
 console.log(groupedStudents);
 
@@ -61,29 +60,41 @@ console.log(groupedStudents);
 
 
 function translateStr(str) {
-    let result1 = ""
+    let result1 = "";
+    // Преобразование каждого символа строки в его ASCII-код
     for (let i = 0; i < str.length; i++) {
-        result1 += str[i].charCodeAt()
+        result1 += str[i].charCodeAt();
     }
-    let result2 = ""
+
+    let result2 = "";
+    // Заменяем все цифры "7" в ASCII-кодах на "1"
     for (let i = 0; i < result1.length; i++) {
-        if (result1[i] == "7") {
-            result2 += "1"
+        if (result1[i] === "7") {
+            result2 += "1";
         } else {
-            result2 += result1[i]
+            result2 += result1[i];
         }
     }
-    console.log(result1)
-    console.log(result2)
+
+    let total1 = Number(result1);
+    let total2 = Number(result2);
+
+    let difference = total1 - total2;
+
+    console.log("Original total (result1):", total1);
+    console.log("Modified total (result2):", total2);
+    console.log("Difference:", difference);
 }
-reverseStr("ABC")
+
+translateStr("ABC");  // Пример вызова функции с аргументом "ABC"
+
 
 //ЗАДАНИЕ 5. Создайте функцию, которая принимает несколько объектов в качестве параметров и возвращает НОВЫЙ объект со всеми свойствами из входных объектов. Для объединения объектов и создания НОВОГО объекта использовать метод assign
 
 function extend(...objects) {
     return Object.assign({}, ...objects);
 }
-console.log(extend({ a: 1, b: 2 }, { c: 3 }))
+console.log(extend({ a: 1, b: 2 }, { a: 3, c: 3 }))
 
 //ЗАДАНИЕ 6. Создайте башню-пирамиду, состоящую из символов "*". В качестве входного параметра приходит число этажей башни.
 
@@ -98,4 +109,4 @@ function buildPyramid(floors) {
     }
 }
 
-buildPyramid(3)
+buildPyramid(5)

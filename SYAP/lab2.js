@@ -85,3 +85,16 @@ function filterStrings(arr1, arr2) {
     return arr3;
 }
 console.log(filterStrings(['apple', 'banana', 'orange', 'kiwi'], ['banana', 'kiwi', 'grape']))
+// function flattenArray(arr, depth = Infinity) {
+//     return arr.reduce((acc, val) => {
+        
+//         if (Array.isArray(val) && depth > 0) {
+//             return acc.concat(flattenArray(val, depth - 1)); 
+//         } else {
+//             return acc.concat(val); 
+//         }
+//     }, []);
+// }
+
+// console.log(flattenArray([1, [1, 2, [3, 4, [5, 6]]], [2, 4], [[7, 8], 9]], 2)); 
+

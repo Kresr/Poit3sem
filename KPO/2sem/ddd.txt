@@ -1,0 +1,3 @@
+ml /c  asm2.asm /Fo asm2.asm
+link asm2.obj user32.lib /SUBSYSTEM:WINDOWS /OUT:program.exe
+program.exe

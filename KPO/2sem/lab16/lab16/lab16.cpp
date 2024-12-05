@@ -30,17 +30,17 @@ int _tmain(int argc, _TCHAR* argv[])
 
     // Цепочка: abbf, abcgdgbf, abcgbbegbf
     FST::FST fst1(
-        (char*)"abcgdgbf",
+        (char*)"abbbcgbbbdgcgbbegcgdgcgbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeegbbbf",
         12,
         FST::NODE(1, FST::RELATION('a', 1)), //0
         FST::NODE(1, FST::RELATION('b', 2)), //1 
         FST::NODE(3, FST::RELATION('b', 2), FST::RELATION('c', 3), FST::RELATION('b', 10)),//2
         FST::NODE(1, FST::RELATION('g', 4)), //3
-        FST::NODE(3, FST::RELATION('b', 5), FST::RELATION('d', 6), FST::RELATION('b', 7)), //4
+        FST::NODE(4, FST::RELATION('b', 4), FST::RELATION('b', 5), FST::RELATION('d', 6), FST::RELATION('b', 7)), //4
         FST::NODE(2, FST::RELATION('d', 6), FST::RELATION('b', 7)), //5 
         FST::NODE(1, FST::RELATION('g', 9)), //6 
-        FST::NODE(2, FST::RELATION('e', 7), FST::RELATION('e', 8)), //7 
-        FST::NODE(2, FST::RELATION('g', 8), FST::RELATION('g', 9)), //8
+        FST::NODE(2, FST::RELATION('b', 7), FST::RELATION('e', 8)), //7 
+        FST::NODE(2, FST::RELATION('e', 8), FST::RELATION('g', 9)), //8
         FST::NODE(2, FST::RELATION('c', 3), FST::RELATION('b', 10)), //9
         FST::NODE(2, FST::RELATION('b', 10), FST::RELATION('f', 11)), // 10
         FST::NODE() //11

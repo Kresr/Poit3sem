@@ -27,7 +27,6 @@ int getValidatedInput() {
         cout << "Введите стартовую вершину (1-10): ";
         cin >> start;
 
-
         if (cin.fail() || cin.peek() != '\n' || start < 1 || start > 10) {
             cout << "Ошибка: введите целое число от 1 до 10." << endl;
             cin.clear(); 
@@ -119,7 +118,7 @@ int main()
     cout << "\nСписок смежности: " << endl;
     int arrEdges[10][10] =
     { {2,5},
-        {7,8},
+        {1,7,8},
         {8},
         {6,9},
         {1,6},
