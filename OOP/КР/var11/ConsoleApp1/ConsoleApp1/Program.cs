@@ -21,7 +21,7 @@ namespace Variant11
             int num1 = int.Parse(Console.ReadLine());
             Console.Write("Введите второе число: ");
             int num2 = int.Parse(Console.ReadLine());
-            string result = (num1 + num2).ToString();
+            string result = (num1.ToString() + num2.ToString());
             Console.WriteLine($"Результат сложения: {result}");
         }
 
@@ -51,6 +51,7 @@ namespace Variant11
             Console.WriteLine($"Сумма точек: {sum}");
             Console.WriteLine($"Разность точек: {diff}");
             Console.WriteLine($"p1 > p2: {p1.CompareTo(p2) > 0}");
+            Console.WriteLine($"p1 == p2: {p1.CompareTo(p2) == 0}");
         }
 
         // 3. Реализация интерфейса IGraph в Point и Line
