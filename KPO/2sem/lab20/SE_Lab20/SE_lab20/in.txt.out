@@ -1,6 +1,0 @@
-uint function countsum(uint a, uint b)|{|	output('calculating sum');|	return (a+b);|};|uint function coutsomethingelse(uint a, uint b)|{|	output('calculating combo');|	return (a + b + countsum(a,b));|};|main|{|	declare uint operation = coutsomethingelse(4,5);|	|	output(operation);|	|	if(operation > 10)|	[|		output('counting more then 10');|	]|	else|	[|		output('counting less then 10');|		output('counting less then 10');|	];|	|	declare uint counter = 0;|	|	while(counter < 6)|	[|		operation = random(counter) * pow(counter ,counter);|		operation = (operation-1) / 3;|		output(operation);|		|		counter = counter +1;|	];||	output(counter);|	output('bitwise operations');|	counter << 2;|	output(counter);||	declare string message = 'new calculating';||	operation = operation % 7 +1;||	if(operation < 5)|	[|		output(message);|		output(operation);|	];||	return 0;|};
---- Ошибка!!! --- 
-Ошибка 123: Лексический анализ: нераспознанная лексема
-Строка: 3
-Столбец: 1
-

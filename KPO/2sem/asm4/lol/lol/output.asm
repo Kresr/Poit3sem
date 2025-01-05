@@ -8,8 +8,8 @@ MessageBoxA PROTO : DWORD, : DWORD, : DWORD, : DWORD
 MB_OK EQU 0
 STR1 DB "MessageBox Example", 0
 HW DD ?
-CHAR_ARRAY DB 'e', 'x', 'a', 'm', 'p', 'l', 'e', 0
-BOOLEAN DB 1
+CHAR_ARRAY DB 's', 't', 'a', 's', 0
+BOOLEAN DB 0
 STRUCT_ID DD 42
 STRUCT_VALUE DD 3.14
 INT_ARRAY DD 1, 2, 3, 4, 5

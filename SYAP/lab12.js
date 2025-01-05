@@ -83,7 +83,9 @@ class Sudoku {
                 if (!this.checkSquare(row, col)) valid = false;
             }
         }
+        console.log(valid);
         return valid;
+        
     }
 
     // Метод для генерации правильного игрового поля (заполняет поле корректно)

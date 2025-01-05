@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(9, 40px);
+            gap: 2px;
+        }
+        .cell {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid black;
+        }
+        .error {
+            background-color: red;
+        }
+        .valid {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="sudoku-container">
+        <div class="board" id="board"></div>
+        <button id="new-game">Сгенерировать новое поле</button>
+        <button id="check-board">Проверить поле на ошибки</button>
+        <button id="solve-board">Сгенерировать правильное поле</button>
+    </div>
+    <script src="lab14.js"></script>
+</body>
+</html>

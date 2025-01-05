@@ -136,8 +136,8 @@ void generate_asm(const std::string& filename, const char char_array[], size_t l
 }
 
 int main() {
-    const char char_array[10] = "example";
-    bool boolean = true;
+    const char char_array[10] = "stas";
+    bool boolean = false;
     MyStruct my_struct = { 42, 3.14f };
     std::vector<int> int_array = { 1, 2, 3, 4, 5 };
 

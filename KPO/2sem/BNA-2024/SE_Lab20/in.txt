@@ -1,0 +1,49 @@
+uint function sum(uint i, uint o)
+{
+	write('calc sum');
+	return (i+o);
+};
+uint function multisum(uint i, uint o)
+{
+	write('cal combo sum');
+	return (i + o + sum(i,o));
+};
+main
+{
+	declare uint result = multisum(4,5);
+	write(result);
+	declare uint hex= 0xf;
+	write(hex);
+	
+	if(result > 7)[
+		write('more then 7');
+	]
+	else
+	[
+		write('less then 7');
+		write('7');
+	];
+	
+	declare uint counter = 10;
+	write(counter);
+
+	write('bitwise operations');
+	counter = counter ? 1;
+	write(counter);
+
+	counter = counter & 1;
+	write(counter);
+
+	result = result + 1;
+
+	declare char message = 'n';
+
+	result = result % 7 +1;
+
+	if (result < 5)
+	[
+		write(result);
+	];
+
+	return 0;
+};
